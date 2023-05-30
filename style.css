@@ -189,12 +189,18 @@ img {
     border-radius: 30px;
     font-size: var(--fs-small);
     color: var(--pale-blue);
+    cursor: pointer;
+    transition: background-color .4s;
+}
+
+.results-summary .summary button:hover {
+    background-color: var(--light-royal-blue);
 }
 
 /* #endregion */
 
 .attribution {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     color: var(--white);

@@ -8,12 +8,13 @@
   <meta name='description' content='A results summary component.' />
   <meta name='keywords' content='results, component, frontendmentor' />
   <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-  <!-- <link rel='icon' type='image/png' sizes='32x32' href='./images/icon/png' /> -->
+  <link rel='icon' type='image/png' sizes='32x32' href='./assets/images/favicon-32x32.png' />
   <link rel='stylesheet' href='./style.css' />
-  <script src='./script.js' defer></script>
+  <script type="module" src='./script.js' ></script>
 </head>
 
 <body>
+  <script>0</script>
   <!--#region-->
   <!--,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-->
   <!--..dddddddd...................................................................................................cccccc............................-->
@@ -52,46 +53,20 @@
       <div class="summary">
         <h2>Summary</h2>
         <div class="item-cont">
-          <div class="item reaction">
-            <div>
-              <img src="./assets/images/icon-reaction.svg" alt="reaction-icon">
-              <p>Reaction</p>
+          <template id="item-template">
+            <div class="item">
+              <div>
+                <img src="./assets/images/" alt="" />
+                <p class="category"></p>
+              </div>
+              <div class="score">
+                <p><span></span> / 100</p>
+              </div>
             </div>
-            <div class="score">
-              <p><span>80</span> / 100</p>
-            </div>
-          </div>
-          <div class="item memory">
-            <div>
-              <img src="./assets/images/icon-memory.svg" alt="memory-icon">
-              <p>Memory</p>
-            </div>
-            <div class="score">
-              <p><span>92</span> / 100</p>
-            </div>
-          </div>
-          <div class="item verbal">
-            <div>
-              <img src="./assets/images/icon-verbal.svg" alt="verbal-icon">
-              <p>Verbal</p>
-            </div>
-            <div class="score">
-              <p><span>61</span> / 100</p>
-            </div>
-          </div>
-          <div class="item visual">
-            <div>
-              <img src="./assets/images/icon-visual.svg" alt="visual-icon">
-              <p>Visual</p>
-            </div>
-            <div class="score">
-              <p><span>72</span> / 100</p>
-            </div>
-          </div>
-        </div>
+          </template>
 
+        </div>
         <button disabled="disabled">Continue</button>
-      </div>
     </div>
   </div>
   <div class="attribution">
