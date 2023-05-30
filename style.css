@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --light-red: hsl(0, 100%, 67%);
+    --orange-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+    --transparent-red: hsla(0, 100%, 67%, .1);
+    --transparent-yellow: hsla(39, 100%, 56%, .1);
+    --transparent-teal: hsla(166, 100%, 37%, .1);
+    --transparent-blue: hsla(234, 85%, 45%, .1);
+
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+
+    --dark-grey: hsl(0, 0%, 12%);
+
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+
+    --transparent-gray-blue: hsla(224, 30%, 27%, .4);
+
+    --fw-light: 500;
+    --fw-normal: 700;
+    --fw-bold: 800;
+
+    --fs-small: 18px;
+    --fs-medium: 20px;
+    --fs-large: 40px;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: var(--fs-small);
+    font-family: 'Hanken Grotesk';
+    background-color: var(--dark-grey);
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.results-summary {
+    max-width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.results-summary .results-summary-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 60rem;
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+@media screen and (min-width:38rem) {
+    .results-summary .results-summary-inner {
+        grid-template-columns: 1fr 1fr;
+        border-radius: 20px;
+    }
+}
+
+/* #region Result Part */
+.results-summary .result {
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+    background-image: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+    text-align: center;
+    padding: 2rem;
+    color: var(--light-lavender);
+    border-radius: 0 0 20px 20px;
+}
+
+@media screen and (min-width: 38rem) {
+    .results-summary .result {
+        border-radius: 20px;
+    }
+}
+
+.results-summary .result h2 {
+    font-size: var(--fs-small);
+    font-weight: var(--fw-normal);
+    color: var(--light-lavender);
+}
+
+.results-summary .average {
+    display: inline-block;
+    width: 8rem;
+    height: 8rem;
+    padding-top: 1.8rem;
+    border-radius: 50%;
+    background-image: linear-gradient(var(--violet-blue), var(--persian-blue));
+}
+
+.results-summary .average :first-child {
+    font-size: var(--fs-large);
+    font-weight: var(--fw-bold);
+}
+
+.results-summary .remark {
+    color: var(--white);
+    font-size: var(--fs-medium);
+    font-weight: var(--fw-normal);
+}
+
+.results-summary .result p {
+    max-width: 14rem;
+    line-height: 1.4;
+}
+/* #endregion */
+
+/* #region Summary Part */
+.results-summary .summary {
+    background-color: var(--white);
+    padding: 2rem 1rem;
+}
+
+.results-summary .summary h2 {
+    color: var(--dark-grey);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-normal);
+}
+
+.results-summary .item-cont {
+    margin: 1rem 0;
+}
+
+.results-summary .item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: .8rem 0;
+}
+
+.results-summary .item :first-child {
+    display: flex;
+    gap: .7rem;
+}
+
+.results-summary .item .score {
+    color: var(--transparent-gray-blue);
+    font-weight: var(--fw-normal);
+}
+
+.results-summary .item .score span {
+    color: var(--dark-gray-blue);
+}
+
+.results-summary .reaction {
+    color: var(--light-red);
+    background-color: var(--transparent-red);
+}
+
+.results-summary .memory {
+    color: var(--orange-yellow);
+    background-color: var(--transparent-yellow);
+}
+
+.results-summary .verbal {
+    color: var(--green-teal);
+    background-color: var(--transparent-teal);
+}
+
+.results-summary .visual {
+    color: var(--cobalt-blue);
+    background-color: var(--transparent-blue);
+}
+
+.results-summary .summary button {
+    width: 100%;
+    border: 0;
+    background-color: var(--dark-gray-blue);
+    padding: 1rem 0;
+    border-radius: 30px;
+    font-size: var(--fs-small);
+    color: var(--pale-blue);
+}
+
+/* #endregion */
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: var(--white);
+    left: 50%;
+    translate: -50% 0;
+}
+
+.attribution a {
+    color: var(--light-royal-blue);
+    text-decoration: none;
+}
+
+.attribution a:hover, .attribution a:visited {
+    color: var(--light-lavender);
+}
